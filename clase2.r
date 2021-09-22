@@ -102,3 +102,52 @@
 #(Sumatoria ordenada y escalonada de la frecuencia de un dato)
 
 #---------------------R----------------------------------------------------
+
+#1ro creamos un vector con los datos
+Edades <- c(54,53,49,57,61,62,60,66,67,49,53,50,53,61,70,53,54,50,65,61) # nolint
+Edades # nolint
+
+#Calcular frecuencia de un dato
+frec <- table(Edades)
+frec
+
+#Calcular frecuencia acumulada
+frec_acu <- cumsum(frec);frec_acu
+
+#Se colocan librerias
+library(magrittr)
+library(dplyr)
+
+#Convertir "frec en una base de datos" y sale una tabla de la frecuencia
+frec <- as.data.frame(frec)
+frec
+
+#Agregar frecuencia acumulada
+ #Se convierte "" a un vector
+
+frec_acu <- as.vector(frec_acu);frec_acu
+
+#Unir vector a base de datos
+tabla_frecuencias <- cbind(frec, frec_acu)
+tabla_frecuencias
+
+#Cambiar el nombre
+tabla_frecuencias %<>%  rename(frecuencia = frec)
+
+#Ordenar los datos #menor a mayor
+Edades <- sort(Edades) # nolint 
+Edades # nolint
+
+#Ordenar los daltos mayor a menor
+Edades <- sort(Edades, decreasing = TRUE) # nolint
+Edades # nolint
+
+#Calculo frecuencia relativa
+frec_rela <- prop.table(frec)
+frec_rela
+
+#Calculo frecuencia relativa acumulada
+frec_rela_acu <- cumsum(frec_rela)
+frec_rela_acu
+
+#Tabla datos no agrupados
