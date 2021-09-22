@@ -1,4 +1,4 @@
-#Tabla de frecuencia para datos no agrupados
+#--Tabla de frecuencia para datos no agrupados
  # - Frecuencia de un dato: Las veces que se repite un valor, qué tan freciente
  #sucede algo
 
@@ -11,3 +11,19 @@
 
  # - Frecuencia relativa acumulada: Lo mismo que la acumulada, pero se aplica en
  #la relativa, el total es 1.
+#
+
+#--Tabla de frecuenca para datos agrupados
+ #"Ejemplo de la base de datos de las personas de tal año a tal año"
+ 
+ # - Rango: Límite superior - Límite inferior
+ 
+ # - Intérvalo de clase: Es cada uno de los intérvalos en que se han decidido
+ #agrupar parcialmente los datos con el propósito de hacer un resumen de ellos.
+ 
+ # - Número de intérvalos: 1 + 3,3Log(n)
+
+ # - Amplitud: Cociente entre el rango y el número de intérvalos
+
+ # - Marca de clase: Semisuma entre (L_i+L_s)/2
+

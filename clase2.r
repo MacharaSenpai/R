@@ -153,6 +153,6 @@ tabla_frecuencias %<>%  rename(frecuencia = frec)
 Edades <- sort(Edades) # nolint 
 Edades # nolint
 
-#Ordenar los daltos mayor a menor
+#Ordenar los datos mayor a menor
 Edades <- sort(Edades, decreasing = TRUE) # nolint
 Edades # nolint
