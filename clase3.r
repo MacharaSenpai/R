@@ -26,4 +26,3 @@
  # - Amplitud: Cociente entre el rango y el número de intérvalos
 
  # - Marca de clase: Semisuma entre (L_i+L_s)/2
-
