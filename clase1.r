@@ -1,102 +1,64 @@
-#---------------------Concepto de estadística------------------------------
- #Estadítica: Recolección, análisis e interpretación
- #de datos para sacar conclusiones.
+# para usar comentarios se usa #
 
- #Se hace un muestreo de algo que queramos analizar para tener
- #deciciones y conclusiones de algún suceso.
+#RStudio como una calculadora
 
- #La estadística se aplica en todo: ingeniería, economía, salud
- #deportes, política, clima.
-#
+#Para que haga algo se pone en la linea que quiero correr y undo
+#ctrl+enter  # nolint
+2 + 7
 
-#---------------------Conceptos básicos------------------------------------
- # Población: Colección completa de elementos o resultados que se pueden
- #obtener de algo de inteŕes (conjunto de todos los elementos del cual yo quiero
- #saber algo "saber de todos los habitantes de Ciénaga cuántos, cuáles, etc"
- #"En una empresa de arroz, la población sería el lote de arroz")
+#Número pi
+54 / pi
+pi
 
- # Muestra: Subconjunto represantativo seleccionado de una población. (Las
- #muestras deben ser representativa, por ejemplo, si quiero saber cuántas
- #personas tiene vehículos, y la hago en 10 empresas, todas las perosnas tendrán
- #vehículos y los datos serán erroneos)
+#raíz cuadrada
+sqrt(9)
 
- # Muestra aleatoria: Cualquier muestra que haya sido escogida al alzar.
- #(la muestra debe ser aleatoria y representativa de acuerdo a su tamaño)
- # Variable: Característica o propiedad de los elementos de la población.
- #(es eseo que nosostros queremos saber de la población, puede ser el número
- #de hijos, el mayor grado académico, peso, etc.)
+#Declarar una variable
 
- # Parámetros: Resumen numérico de una población *Valor verdadero.
- #(Nos hablan de valores, resultados, etc que tiene la población)
+x <- 2021
+x + 3
 
- # Estadísticos: Resumen numérico de una muestra.
- #(Es un valor que obtengo de la muestra que estima lo que es el parámetro.
- #(valor real de promedio de las edades).)
-#
+#imprimir algo
+print("Salve")
+cat("Salve", x) #Imprime letras con una variable
 
+x <- 1996 #acá reemplaza 2021 con 1996
 
-#---------------------Tipos de variable------------------------------------
+#Ayuda de una función
 
-#Por su naturaleza
- 
- #-Cualitativas: Son variables que están orientadas a tributos (cualidades
- #de los individuos "color, textura, etc". Estas se dividen en dos:
- 
-  # Ordinales: Están asosiados a un orden (aún cuando no son numéricos
-  #se les puede orden "el nivel de estudio (bachiller, profesional)"
- 
-  # Nominales: No se le da sentido ordenar los datos para algo.
+help(cat)
+?cat
 
- #-Cuantitativas: Es algo que se puede contar.
+x - 1000
 
-  # Discretas:Saltos entre números enteros, resultado de contar algo
-  #(Están orientadas a conteos, tienen números enteros "números de tal que tal")
+#Determinar clases
 
-  # Continuas: Valores entre intérvalos de números reales, resultados de medir
-  #algo
-  #(Están orientadas a cosas que medimos, tienen números decimales "El peso de
-  #una persona")
-#
+a <- "Statictics";a #Se pone "a" al final para mostrar en la consola
 
+#Para saber qué clase es 
+class(a)
+b <- 2021
+class(b)
+c <- 2021L #Para hacer que sea entero se pone L a lo último
+class(c)
+d <- 5 / 0
+class(d)
+d
+e <- 2021 + 2i
+class(e)
 
-#---------------------Ejemplos---------------------------------------------
+#Crear vectores
+f <- c(1,2,3,4) #La C es para unir varias cosas
+f
+g <- c(34,"l",56)
+g
+length(f) #tamaño del vector
 
-# El número de compra de acciones registradas en NYSR en un día
-# (Cuantitaviva, continuas)
+#Crear vector
+h <- vector("numeric", 8) #Crea un vector de 8 ceros
+h
 
-# Las temperaturas registradas cada hora en las principales cuidades de Colombia
-# (Cuantitativa, continuas)
+i <- 5:20;i #crea un vector del 5 al 20
 
-# El número de identificación de los Colombianos mayores de 18 años
-# (Cualitativa, nominal)
-
-# El estrato social de los empleados de una empresa
-# (Cualitativa, ordinal)
-
-#En los dos últimos ejemplos no son cuantitativos a pesar de que hallan
-#números, NO se pueden hacer operaciones
-
-
-#---------------------Estadística Descriptiva------------------------------
-
-#El nombre nos sugiere que estamos describiendo algo, pero no podemos inferir.
-#"Llegas al médico y este te dice que tienes la pálida, de entrada no puede
-#decir que realmente tienes tal cosa. Para hacer la INFERENCIA hay que hacer un
-#análisis."
-
-#-Es preliminar a la estadística inferencial
-#-Resumen y descripción de datos
-#-Tabular, gráfico o numérico
-
-
-#---------------------Distribuciones de frecuencia-------------------------
-
-#-Frecuencia de un dato: Sean x_1, x_2, ... x_n un conjunto de datos distintos.
-#La frecuencia de un dato i, denotada como f_i, se define como el número de
-#veces que aparece el dato en el conjunto.
-#(El número de veces que ese dato aparece en el conjunto)
-
-#-Frecuencia acumulada hasta un dato: Sean x_1, x_2, ... x_n un conjunto de
-#datos con frecuencias f_1,f_2,..._f_n respectivamente, se define la
-#frecuencia acumulada hasta el dato x_1,i=1,...,n denotada F_i.
-#(Sumatoria ordenada y escalonada de la frecuencia de un dato)
+j <- seq(from = 5,to = 20,by = 2);j #cuenta de 5 hasta 20 en dos por dos
+k <- seq(from = 4,by = 3,length.out = 105);k #Vector de 4 en 3 en 3 de tamaño n
