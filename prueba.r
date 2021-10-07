@@ -6,3 +6,11 @@ dist <- fdt(x)
             breaks = 'Sturges')) # nolint
 
 dist
+
+#------------------------------------------------------------------------------
+uwu <- c(165, 237, 222, 255, 194) # nolint
+range(uwu)
+255 - 165 #Rango
+var(uwu) #Varianza
+sd(uwu) #Desviación
+sd(uwu) / mean(uwu) #Coeficiente
