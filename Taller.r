@@ -17,7 +17,7 @@ View(Movies_gross_rating)
  
  ds_freq_table(Movies_gross_rating, Genre) #Se crea una tabla de frecuencias para la variable "Genre" # nolint
 
- #Punto b)    Gráfico de barras
+ #    Gráfico de barras
  library(BSDA) #Carga de la librería.
  library(RColorBrewer) #Carga de la librería.
  
@@ -31,7 +31,7 @@ View(Movies_gross_rating)
         "pink", "slateblue3", "violetred1", "tan2", "orchid4", "seagreen",
         "thistle4", "sienna4", "#312568", "#40d3dd"),
         legend.text = rownames(grafico), #Leyenda
-        args.legend = list(x = "top"), #Posición de leyenda
+        args.legend = list(x = "topright",inset = c(-0.13, -0.25)), #Posición de leyenda #Posición de leyenda
         beside = TRUE)
         text(barp, grafico + 0.5, labels = grafico) #Valor frecuencia barra
 
@@ -60,6 +60,8 @@ View(Movies_gross_rating)
   #Variación,Desviación estándar
   var(Movies_gross_rating$Rating)
   sd(Movies_gross_rating$Rating)
+
+  sd(Movies_gross_rating$Rating) / mean(Movies_gross_rating$Rating)
 
   #Coeficiente de variación
   library(FinCal)
