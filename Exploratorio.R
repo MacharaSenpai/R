@@ -1,3 +1,6 @@
+#Variables factor, se piensan en variables cualitativas, se pueden representar en diagrama de barras
+#base$variable <- as.factor(base$variable)
+
 # Exploratory analysis
 
 # Load data
